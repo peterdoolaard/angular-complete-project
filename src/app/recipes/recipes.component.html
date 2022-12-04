@@ -1,9 +1,22 @@
 <h2>Recipes</h2>
 <div class="row">
   <div class="col-md-5">
-    <app-recipe-list></app-recipe-list>
+    <app-recipe-list
+      (passDetails)="onPassDetails($event)"
+    ></app-recipe-list>
   </div>
   <div class="col-md-7">
-    <app-recipe-detail></app-recipe-detail>
+    <app-recipe-detail
+      *ngIf="recipe; else infotext"
+      [recipe]="recipe"
+    >
+    </app-recipe-detail>
+    <ng-template #infotext>
+      <div class="row">
+        <div class="col-xs-12">
+          <h2>Please select a recipe</h2>
+        </div>
+      </div>
+    </ng-template>
   </div>
 </div>

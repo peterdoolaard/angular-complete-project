@@ -1,4 +1,4 @@
-import {Component} from "@angular/core";
+import { Component, EventEmitter, Output } from "@angular/core";
 
 
 @Component({
@@ -8,6 +8,11 @@ import {Component} from "@angular/core";
 })
 
 export class HeaderComponent {
+  @Output() navigate = new EventEmitter<Event>()
   collapsed = true
+
+  onClick(event) {
+    this.navigate.emit(event)
+  }
 
 }

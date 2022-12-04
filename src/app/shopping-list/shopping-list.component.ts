@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
 import { Ingredient } from "../shared/ingredient.model";
 
 @Component({
@@ -8,9 +8,15 @@ import { Ingredient } from "../shared/ingredient.model";
 })
 
 export class ShoppingList {
+  @Input() navigateTo
+
   ingredients: Ingredient[] = [
     new Ingredient('pepper', 4),
     new Ingredient('tomato', 6)
   ]
+
+  onAddIngredients(ingredient) {
+    this.ingredients.push(ingredient)
+  }
 
 }

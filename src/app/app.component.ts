@@ -6,4 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  navigateTo = 'Recipes'
+  onNavigate(event) {
+    this.navigateTo = event.target.innerText
+  }
 }
