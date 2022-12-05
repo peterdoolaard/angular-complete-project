@@ -11,6 +11,8 @@ export class RecipeDetail implements OnInit {
 
   @Input() recipe: Recipe
 
+  isOpen = false
+
   ngOnInit() { }
 
 }
