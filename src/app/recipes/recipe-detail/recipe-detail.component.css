@@ -1,0 +1,7 @@
+.recipe-detail {
+  margin-block-start: 8rem;
+}
+
+.recipe-detail__image {
+  max-block-size: 300px;
+}
